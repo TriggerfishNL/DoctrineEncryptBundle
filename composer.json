@@ -1,5 +1,5 @@
 {
-    "name": "tobur/doctrine-encrypt-bundle",
+    "name": "triggerfish/doctrine-encrypt-bundle",
     "type": "symfony-bundle",
     "keywords": ["doctrine", "symfony", "aes256", "rijndael", "encrypt", "decrypt"],
     "license": "MIT",
@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tobur\\DoctrineEncryptBundle\\": ""
+            "Triggerfish\\DoctrineEncryptBundle\\": ""
         }
     },
     "authors": [
