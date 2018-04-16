@@ -1,13 +1,13 @@
 services:
-    tobur_doctrine_encrypt.orm_subscriber:
-        class: Tobur\DoctrineEncryptBundle\Subscribers\DoctrineEncryptSubscriber
-        arguments: ["@annotation_reader", "%tobur_doctrine_encrypt.encryptor_class_name%", "%tobur_doctrine_encrypt.secret_key%"]
+    Triggerfish_doctrine_encrypt.orm_subscriber:
+        class: Triggerfish\DoctrineEncryptBundle\Subscribers\DoctrineEncryptSubscriber
+        arguments: ["@annotation_reader", "%Triggerfish_doctrine_encrypt.encryptor_class_name%", "%Triggerfish_doctrine_encrypt.secret_key%"]
         tags:
             -  { name: doctrine.event_subscriber }
-    tobur_doctrine_encrypt.subscriber:
-        alias: tobur_doctrine_encrypt.orm_subscriber
-    tobur_doctrine_encrypt.encryptor:
-        class: Tobur\DoctrineEncryptBundle\Services\Encryptor
+    Triggerfish_doctrine_encrypt.subscriber:
+        alias: Triggerfish_doctrine_encrypt.orm_subscriber
+    Triggerfish_doctrine_encrypt.encryptor:
+        class: Triggerfish\DoctrineEncryptBundle\Services\Encryptor
         arguments:
-            - "%tobur_doctrine_encrypt.encryptor_class_name%"
-            - "%tobur_doctrine_encrypt.secret_key%"
+            - "%Triggerfish_doctrine_encrypt.encryptor_class_name%"
+            - "%Triggerfish_doctrine_encrypt.secret_key%"

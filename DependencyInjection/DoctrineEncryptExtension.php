@@ -1,6 +1,6 @@
 <?php
 
-namespace Tobur\DoctrineEncryptBundle\DependencyInjection;
+namespace Triggerfish\DoctrineEncryptBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -17,8 +17,8 @@ use Symfony\Component\DependencyInjection\Loader;
 class DoctrineEncryptExtension extends Extension {
 
     public static $supportedEncryptorClasses = [
-        'rijndael256' => 'Tobur\DoctrineEncryptBundle\Encryptors\Rijndael256Encryptor',
-        'rijndael128'=> 'Tobur\DoctrineEncryptBundle\Encryptors\Rijndael128Encryptor'
+        'rijndael256' => 'Triggerfish\DoctrineEncryptBundle\Encryptors\Rijndael256Encryptor',
+        'rijndael128'=> 'Triggerfish\DoctrineEncryptBundle\Encryptors\Rijndael128Encryptor'
     ];
 
     /**
@@ -55,8 +55,8 @@ class DoctrineEncryptExtension extends Extension {
         }
 
         //Set parameters
-        $container->setParameter('tobur_doctrine_encrypt.encryptor_class_name', $config['encryptor_class']);
-        $container->setParameter('tobur_doctrine_encrypt.secret_key', $config['secret_key']);
+        $container->setParameter('Triggerfish_doctrine_encrypt.encryptor_class_name', $config['encryptor_class']);
+        $container->setParameter('Triggerfish_doctrine_encrypt.secret_key', $config['secret_key']);
 
         //Load service file
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
@@ -70,6 +70,6 @@ class DoctrineEncryptExtension extends Extension {
      * @return string
      */
     public function getAlias() {
-        return 'tobur_doctrine_encrypt';
+        return 'Triggerfish_doctrine_encrypt';
     }
 }

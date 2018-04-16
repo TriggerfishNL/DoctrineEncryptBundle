@@ -6,11 +6,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Tobur\DoctrineEncryptBundle\Services;
+namespace Triggerfish\DoctrineEncryptBundle\Services;
 
 class Encryptor
 {
-    /** @var \Tobur\DoctrineEncryptBundle\Encryptors\EncryptorInterface */
+    /** @var \Triggerfish\DoctrineEncryptBundle\Encryptors\EncryptorInterface */
     protected $encryptor;
 
     public function __construct($encryptName, $key)

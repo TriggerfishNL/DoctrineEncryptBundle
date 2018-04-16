@@ -1,14 +1,14 @@
 <?php
 
-namespace Tobur\DoctrineEncryptBundle;
+namespace Triggerfish\DoctrineEncryptBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
-use Tobur\DoctrineEncryptBundle\DependencyInjection\DoctrineEncryptExtension;
-use Tobur\DoctrineEncryptBundle\DependencyInjection\Compiler\RegisterServiceCompilerPass;
+use Triggerfish\DoctrineEncryptBundle\DependencyInjection\DoctrineEncryptExtension;
+use Triggerfish\DoctrineEncryptBundle\DependencyInjection\Compiler\RegisterServiceCompilerPass;
 
-class ToburDoctrineEncryptBundle extends Bundle {
+class TriggerfishDoctrineEncryptBundle extends Bundle {
     
     public function build(ContainerBuilder $container) {
         parent::build($container);

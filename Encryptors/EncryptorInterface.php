@@ -1,6 +1,6 @@
 <?php
 
-namespace Tobur\DoctrineEncryptBundle\Encryptors;
+namespace Triggerfish\DoctrineEncryptBundle\Encryptors;
 
 /**
  * Encryptor interface for encryptors

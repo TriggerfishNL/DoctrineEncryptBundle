@@ -1,8 +1,8 @@
 <?php
 
-namespace Tobur\DoctrineEncryptBundle\Command;
+namespace Triggerfish\DoctrineEncryptBundle\Command;
 
-use Tobur\DoctrineEncryptBundle\DependencyInjection\DoctrineEncryptExtension;
+use Triggerfish\DoctrineEncryptBundle\DependencyInjection\DoctrineEncryptExtension;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Helper\ProgressBar;
@@ -55,7 +55,7 @@ class DoctrineDecryptDatabaseCommand extends AbstractCommand
                 } else {
                     $output->writeln('\nGiven encryptor does not exists');
                     $output->writeln('Supported encryptors: ' . implode(', ', array_keys($supportedExtensions)));
-                    $output->writeln('You can also define your own class. (example: Tobur\DoctrineEncryptBundle\Encryptors\Rijndael128Encryptor)');
+                    $output->writeln('You can also define your own class. (example: Triggerfish\DoctrineEncryptBundle\Encryptors\Rijndael128Encryptor)');
                     return;
                 }
             }

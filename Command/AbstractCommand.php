@@ -1,7 +1,7 @@
 <?php
-namespace Tobur\DoctrineEncryptBundle\Command;
+namespace Triggerfish\DoctrineEncryptBundle\Command;
 
-use Tobur\DoctrineEncryptBundle\Subscribers\DoctrineEncryptSubscriber;
+use Triggerfish\DoctrineEncryptBundle\Subscribers\DoctrineEncryptSubscriber;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
@@ -39,7 +39,7 @@ abstract class AbstractCommand extends ContainerAwareCommand
         $container = $this->getContainer();
         $this->entityManager = $container->get('doctrine.orm.entity_manager');
         $this->annotationReader = $container->get('annotation_reader');
-        $this->subscriber = $container->get('tobur_doctrine_encrypt.subscriber');
+        $this->subscriber = $container->get('Triggerfish_doctrine_encrypt.subscriber');
     }
 
     /**
@@ -109,7 +109,7 @@ abstract class AbstractCommand extends ContainerAwareCommand
         $properties    = [];
 
         foreach ($propertyArray as $property) {
-            if ($this->annotationReader->getPropertyAnnotation($property, 'Tobur\DoctrineEncryptBundle\Configuration\Encrypted')) {
+            if ($this->annotationReader->getPropertyAnnotation($property, 'Triggerfish\DoctrineEncryptBundle\Configuration\Encrypted')) {
                 $properties[] = $property;
             }
         }
