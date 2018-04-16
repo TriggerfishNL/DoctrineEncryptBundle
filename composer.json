@@ -6,9 +6,9 @@
     "description": "Symfony 4 bundle which allows to encrypt data in database with some encrypt algorithm",
     "require": {
         "php": "^7.1",
-        "symfony/framework-bundle": "^4.0",
         "symfony/orm-pack": "v1.0.5",
-        "ext-mcrypt": "*"
+        "ext-mcrypt": "*",
+        "symfony/console": "^4.0"
     },
     "autoload": {
         "psr-4": {
